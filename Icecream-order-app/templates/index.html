@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Heladería - Toma de Pedidos
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Abigail</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="menu">
+                <h2 class="text-center">Menú</h2>
+                <ul id="menu-list" class="list-group"></ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="cart">
+                <h2 class="text-center">Carrito</h2>
+                <ul id="cart-list" class="list-group"></ul>
+                <h3 class="text-center">Total: $<span id="total">0.00</span></h3>
+                <div class="mb-3">
+                    <label for="table-number" class="form-label">Número de Mesa</label>
+                    <input type="number" class="form-control" id="table-number" min="1"
+                        placeholder="Ingrese número de mesa" required>
+                </div>
+                <button id="confirm-order" class="btn btn-primary w-100">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+    crossorigin="anonymous"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(error => {
+            console.error('Service Worker registration failed:', error);
+        });
+    }
+</script>
+{% endblock %}
