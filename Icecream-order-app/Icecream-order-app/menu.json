@@ -1,0 +1,6 @@
+[
+{"id": 1, "name": "Helado de Vainilla", "price": 2.50},
+{"id": 2, "name": "Helado de Chocolate", "price": 2.50},
+{"id": 3, "name": "Topping de Caramelo", "price": 0.50},
+{"id": 4, "name": "Topping de Chocolate", "price": 0.50}
+]

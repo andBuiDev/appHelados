@@ -27,28 +27,28 @@ body::before {
 h1,
 h2,
 h3 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
-    color: #61ffc2;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Fredoka', sans-serif;
+    color: #ff6f61;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     /* Improve readability */
 }
 
 .navbar {
-    background: linear-gradient(135deg, #ff8b8b, #61fff7);
+    background: linear-gradient(135deg, #ff9a8b, #ff6f61);
     padding: 15px 0;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
-    font: size 15px;
-    color: rgb(241, 226, 226) !important;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    color: white !important;
 }
 
 .nav-link {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     color: white !important;
-    font: size 3px;;
+    font-size: 1.2rem;
     margin: 0 15px;
 }
 
@@ -167,13 +167,4 @@ h3 {
 .orders .list-group-flush {
     margin-left: 20px;
     background-color: transparent;
-}
-#footer {
-    background-color: #f8f9fa;
-    color: #6c7c7d;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }

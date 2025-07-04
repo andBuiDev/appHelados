@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Sitio Web Avanzado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Sitio Web</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('home')">Home</a></li>
+        <li><a href="#" onclick="mostrarSeccion('info')">Información</a></li>
+        <li><a href="#" onclick="mostrarSeccion('estadistica')">Estadística</a></li>
+        <li><a href="#" onclick="mostrarSeccion('contacto')">Formulario de Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="seccion visible">
+    <h2>Noticias</h2>
+    <article>
+      <h3>Titular Principal</h3>
+      <p>Texto introductorio como en un periódico. Aquí va contenido destacado.</p>
+    </article>
+    <div class="carrusel">
+      <img id="imagenCarrusel" src="img1.jpg" alt="Carrusel">
+    </div>
+  </section>
+
+  <section id="info" class="seccion">
+    <h2>Información</h2>
+    <div class="grid-noticias">
+      <article><h3>Nota 1</h3><p>Contenido de tipo periódico.</p></article>
+      <article><h3>Nota 2</h3><p>Otra columna como en un periódico.</p></article>
+      <article><h3>Nota 3</h3><p>Más información distribuida visualmente.</p></article>
+    </div>
+  </section>
+
+  <section id="estadistica" class="seccion">
+    <h2>Estadísticas Dinámicas</h2>
+    <label for="filtro">Selecciona una categoría:</label>
+    <select id="filtro" onchange="actualizarGrafico()">
+      <option value="ventas">Ventas</option>
+      <option value="usuarios">Usuarios</option>
+    </select>
+    <div class="grafico-container">
+      <canvas id="grafico" width="400" height="200"></canvas>
+    </div>
+  </section>
+
+  <section id="contacto" class="seccion">
+    <h2>Formulario de Contacto</h2>
+    <form id="formContacto" onsubmit="return enviarFormulario()">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="msgForm"></p>
+  </section>
+
+  <footer>
+    <p>Redes Sociales:
+      <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+      <a href="https://www.twitter.com" target="_blank">X</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
